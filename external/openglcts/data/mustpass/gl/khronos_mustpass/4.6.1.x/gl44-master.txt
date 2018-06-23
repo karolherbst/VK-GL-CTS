@@ -6969,7 +6969,6 @@ KHR-GL44.geometry_shader.api.getProgramiv
 KHR-GL44.geometry_shader.api.getProgramiv2
 KHR-GL44.geometry_shader.api.getProgramiv3
 KHR-GL44.geometry_shader.api.fs_gs_draw_call
-KHR-GL44.geometry_shader.api.max_image_uniforms
 KHR-GL44.geometry_shader.api.max_shader_storage_blocks
 KHR-GL44.geometry_shader.api.max_atomic_counters
 KHR-GL44.geometry_shader.api.max_atomic_counter_buffers
@@ -7142,4 +7141,3 @@ KHR-GL44.texture_buffer.texture_buffer_errors
 KHR-GL44.texture_buffer.texture_buffer_active_uniform_validation_fragment_shader
 KHR-GL44.texture_buffer.texture_buffer_active_uniform_validation_compute_shader
 KHR-GL44.texture_buffer.texture_buffer_buffer_parameters
-KHR-GL44.texture_buffer.texture_buffer_precision

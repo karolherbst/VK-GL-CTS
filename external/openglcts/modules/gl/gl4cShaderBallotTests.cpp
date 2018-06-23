@@ -49,7 +49,7 @@ ShaderBallotBaseTestCase::ShaderPipeline::ShaderPipeline(glu::ShaderType	testedS
 
 	// vertex shader parts
 
-	m_shaders[glu::SHADERTYPE_VERTEX].push_back("#version 450 core\n");
+	m_shaders[glu::SHADERTYPE_VERTEX].push_back("#version 440 core\n");
 	m_shaders[glu::SHADERTYPE_VERTEX].push_back(m_testedShader == glu::SHADERTYPE_VERTEX ? testedHeadPart : "");
 	m_shaders[glu::SHADERTYPE_VERTEX].push_back("in highp vec2 inPosition;\n"
 												"in highp vec4 inColor;\n"
@@ -67,7 +67,7 @@ ShaderBallotBaseTestCase::ShaderPipeline::ShaderPipeline(glu::ShaderType	testedS
 
 	// fragment shader parts
 
-	m_shaders[glu::SHADERTYPE_FRAGMENT].push_back("#version 450 core\n");
+	m_shaders[glu::SHADERTYPE_FRAGMENT].push_back("#version 440 core\n");
 	m_shaders[glu::SHADERTYPE_FRAGMENT].push_back(m_testedShader == glu::SHADERTYPE_FRAGMENT ? testedHeadPart : "");
 	m_shaders[glu::SHADERTYPE_FRAGMENT].push_back("in highp vec4 gsColor;\n"
 												  "out highp vec4 fsColor;\n"
@@ -81,7 +81,7 @@ ShaderBallotBaseTestCase::ShaderPipeline::ShaderPipeline(glu::ShaderType	testedS
 
 	// tessellation control shader parts
 
-	m_shaders[glu::SHADERTYPE_TESSELLATION_CONTROL].push_back("#version 450 core\n");
+	m_shaders[glu::SHADERTYPE_TESSELLATION_CONTROL].push_back("#version 440 core\n");
 	m_shaders[glu::SHADERTYPE_TESSELLATION_CONTROL].push_back(
 		m_testedShader == glu::SHADERTYPE_TESSELLATION_CONTROL ? testedHeadPart : "");
 	m_shaders[glu::SHADERTYPE_TESSELLATION_CONTROL].push_back(
@@ -106,7 +106,7 @@ ShaderBallotBaseTestCase::ShaderPipeline::ShaderPipeline(glu::ShaderType	testedS
 
 	// tessellation evaluation shader parts
 
-	m_shaders[glu::SHADERTYPE_TESSELLATION_EVALUATION].push_back("#version 450 core\n");
+	m_shaders[glu::SHADERTYPE_TESSELLATION_EVALUATION].push_back("#version 440 core\n");
 	m_shaders[glu::SHADERTYPE_TESSELLATION_EVALUATION].push_back(
 		m_testedShader == glu::SHADERTYPE_TESSELLATION_EVALUATION ? testedHeadPart : "");
 	m_shaders[glu::SHADERTYPE_TESSELLATION_EVALUATION].push_back("layout(triangles, equal_spacing, cw) in;\n"
@@ -127,7 +127,7 @@ ShaderBallotBaseTestCase::ShaderPipeline::ShaderPipeline(glu::ShaderType	testedS
 
 	// geometry shader parts
 
-	m_shaders[glu::SHADERTYPE_GEOMETRY].push_back("#version 450 core\n");
+	m_shaders[glu::SHADERTYPE_GEOMETRY].push_back("#version 440 core\n");
 	m_shaders[glu::SHADERTYPE_GEOMETRY].push_back(m_testedShader == glu::SHADERTYPE_GEOMETRY ? testedHeadPart : "");
 	m_shaders[glu::SHADERTYPE_GEOMETRY].push_back("layout(triangles) in;\n"
 												  "layout(triangle_strip, max_vertices = 3) out;\n"
@@ -149,7 +149,7 @@ ShaderBallotBaseTestCase::ShaderPipeline::ShaderPipeline(glu::ShaderType	testedS
 
 	// compute shader parts
 
-	m_shaders[glu::SHADERTYPE_COMPUTE].push_back("#version 450 core\n");
+	m_shaders[glu::SHADERTYPE_COMPUTE].push_back("#version 440 core\n");
 	m_shaders[glu::SHADERTYPE_COMPUTE].push_back(m_testedShader == glu::SHADERTYPE_COMPUTE ? testedHeadPart : "");
 	m_shaders[glu::SHADERTYPE_COMPUTE].push_back(
 		"layout(rgba32f, binding = 1) writeonly uniform highp image2D destImage;\n"
@@ -249,7 +249,7 @@ void ShaderBallotBaseTestCase::ShaderPipeline::executeComputeShader(deqp::Contex
 
 	// render output texture
 
-	std::string vs = "#version 450 core\n"
+	std::string vs = "#version 440 core\n"
 					 "in highp vec2 position;\n"
 					 "in vec2 inTexcoord;\n"
 					 "out vec2 texcoord;\n"
@@ -259,7 +259,7 @@ void ShaderBallotBaseTestCase::ShaderPipeline::executeComputeShader(deqp::Contex
 					 "	gl_Position = vec4(position, 0.0, 1.0);\n"
 					 "}\n";
 
-	std::string fs = "#version 450 core\n"
+	std::string fs = "#version 440 core\n"
 					 "uniform sampler2D sampler;\n"
 					 "in vec2 texcoord;\n"
 					 "out vec4 color;\n"
