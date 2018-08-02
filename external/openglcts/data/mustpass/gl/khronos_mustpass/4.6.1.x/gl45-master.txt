@@ -26,8 +26,6 @@ KHR-GL45.transform_feedback.draw_xfb_test
 KHR-GL45.transform_feedback.draw_xfb_feedbackk_test
 KHR-GL45.transform_feedback.draw_xfb_stream_test
 KHR-GL45.transform_feedback.capture_special_interleaved_test
-KHR-GL45.transform_feedback.draw_xfb_instanced_test
-KHR-GL45.transform_feedback.draw_xfb_stream_instanced_test
 KHR-GL45.texture_repeat_mode.r8_49x23_0_clamp_to_edge
 KHR-GL45.texture_repeat_mode.r8_49x23_0_repeat
 KHR-GL45.texture_repeat_mode.r8_49x23_0_mirrored_repeat
