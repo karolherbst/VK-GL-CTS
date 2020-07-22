@@ -2795,7 +2795,7 @@ bool PipelineStatisticsQueryTestFunctional2::executeTexSubImageTest(void* pThis)
 {
 	PipelineStatisticsQueryTestFunctional2* data_ptr	   = (PipelineStatisticsQueryTestFunctional2*)pThis;
 	const glw::Functions&					gl			   = data_ptr->m_context.getRenderContext().getFunctions();
-	const unsigned int						test_data_size = PipelineStatisticsQueryTestFunctional2::bo_size / 2;
+	const unsigned int						test_data_size = PipelineStatisticsQueryTestFunctional2::bo_size * 2;
 	unsigned char							test_data[test_data_size];
 
 	memset(test_data, 0xFF, test_data_size);

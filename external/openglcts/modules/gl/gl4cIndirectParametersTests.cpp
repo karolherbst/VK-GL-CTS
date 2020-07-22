@@ -368,7 +368,7 @@ void MultiDrawArraysIndirectCountCase::init()
 	gl.bindBuffer(GL_ARRAY_BUFFER, m_arrayBuffer);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBindBuffer");
 
-	gl.bufferData(GL_ARRAY_BUFFER, 24 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
+	gl.bufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBufferData");
 
 	// Setup indirect command buffer
@@ -388,7 +388,7 @@ void MultiDrawArraysIndirectCountCase::init()
 	gl.bindBuffer(GL_PARAMETER_BUFFER_ARB, m_parameterBuffer);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBindBuffer");
 
-	gl.bufferData(GL_PARAMETER_BUFFER_ARB, 100 * sizeof(GLushort), parameters, GL_STATIC_DRAW);
+	gl.bufferData(GL_PARAMETER_BUFFER_ARB, sizeof(parameters), parameters, GL_STATIC_DRAW);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBufferData");
 }
 
@@ -551,7 +551,7 @@ void MultiDrawElementsIndirectCountCase::init()
 	gl.bindBuffer(GL_ARRAY_BUFFER, m_arrayBuffer);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBindBuffer");
 
-	gl.bufferData(GL_ARRAY_BUFFER, 24 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
+	gl.bufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBufferData");
 
 	// Setup element array buffer
@@ -571,7 +571,7 @@ void MultiDrawElementsIndirectCountCase::init()
 	gl.bindBuffer(GL_DRAW_INDIRECT_BUFFER, m_drawIndirectBuffer);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBindBuffer");
 
-	gl.bufferData(GL_DRAW_INDIRECT_BUFFER, 3 * sizeof(DrawElementsIndirectCommand), indirect, GL_STATIC_DRAW);
+	gl.bufferData(GL_DRAW_INDIRECT_BUFFER, sizeof(indirect), indirect, GL_STATIC_DRAW);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBufferData");
 
 	// Setup parameters Re: buffer

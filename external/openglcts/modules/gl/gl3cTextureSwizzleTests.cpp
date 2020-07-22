@@ -4189,8 +4189,9 @@ void FunctionalTest::verifyOutputImage(const testCase& test_case, size_t output_
 	glw::GLubyte expected_data_top[8] = { 0 };
 	size_t		 texel_size			  = 0;
 
+	size_t tex_size = index_of_swizzled_channel == CHANNEL_INDEX_ZERO ? 0 : test_case.m_texture_sizes[index_of_swizzled_channel == CHANNEL_INDEX_ONE ? 0 : index_of_swizzled_channel];
 	calculate_expected_value(test_case.m_source_texture_format_index, output_format_index, index_of_swizzled_channel,
-							 test_case.m_texture_sizes[index_of_swizzled_channel], output_channel_size,
+							 tex_size, output_channel_size,
 							 expected_data_low, expected_data_top, texel_size);
 
 	for (size_t i = 0; i < m_output_height * m_output_width; ++i)

@@ -184,7 +184,7 @@ void ShaderDrawParametersTestBase::init()
 	gl.bindBuffer(GL_ARRAY_BUFFER, m_arrayBuffer);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBindBuffer");
 
-	gl.bufferData(GL_ARRAY_BUFFER, 24 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
+	gl.bufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBufferData");
 
 	// Setup element array buffer
@@ -753,7 +753,7 @@ void ShaderMultiDrawArraysIndirectCountParametersTestCase::initChild()
 	gl.bindBuffer(GL_DRAW_INDIRECT_BUFFER, m_drawIndirectBuffer);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBindBuffer");
 
-	gl.bufferData(GL_DRAW_INDIRECT_BUFFER, 4 * sizeof(SDPDrawArraysIndirectCommand), indirect, GL_STATIC_DRAW);
+	gl.bufferData(GL_DRAW_INDIRECT_BUFFER, sizeof(indirect), indirect, GL_STATIC_DRAW);
 	GLU_EXPECT_NO_ERROR(gl.getError(), "glBufferData");
 
 	// Setup indirect command buffer

@@ -6365,7 +6365,7 @@ struct CNegativeNoVAOArrays : public DrawIndirectBase
 
 		glGenBuffers(1, &_bufferIndirect);
 		glBindBuffer(GL_DRAW_INDIRECT_BUFFER, _bufferIndirect);
-		glBufferData(GL_DRAW_INDIRECT_BUFFER, sizeof(DrawElementsIndirectCommand), &indirectArrays, GL_STATIC_DRAW);
+		glBufferData(GL_DRAW_INDIRECT_BUFFER, sizeof(indirectArrays), &indirectArrays, GL_STATIC_DRAW);
 
 		DIResult result;
 		glDrawArraysIndirect(GL_TRIANGLES, 0);
