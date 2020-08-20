@@ -2121,7 +2121,7 @@ GLES2SharingRandomTest::GLES2SharingRandomTest (EglTestContext& context, const T
 	, m_executionReady	(false)
 	, m_requiresRestart	(false)
 	, m_beginTimeUs		(0)
-	, m_timeOutUs		(10000000)	// 10 seconds
+	, m_timeOutUs		(10000000000ul)	// 10 seconds
 	, m_sleepTimeMs		(1)		// 1 milliseconds
 	, m_timeOutTimeUs	(0)
 	, m_eglDisplay		(EGL_NO_DISPLAY)
@@ -3012,7 +3012,7 @@ GLES2ThreadedSharingTest::GLES2ThreadedSharingTest (EglTestContext& context, con
 	, m_executionReady	(false)
 	, m_requiresRestart	(false)
 	, m_beginTimeUs		(0)
-	, m_timeOutUs		(10000000)	// 10 seconds
+	, m_timeOutUs		(10000000000ul)	// 10 seconds
 	, m_sleepTimeMs		(1)			// 1 milliseconds
 	, m_timeOutTimeUs	(0)
 	, m_eglDisplay		(EGL_NO_DISPLAY)

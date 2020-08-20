@@ -663,14 +663,14 @@ GlxDrawable* createDrawable (GlxVisual& visual, const RenderConfig& config)
 {
 	RenderConfig::SurfaceType surfaceType = config.surfaceType;
 
-	if (surfaceType == RenderConfig::SURFACETYPE_DONT_CARE)
-	{
-		if (visual.getXVisual() == DE_NULL)
-			// No visual, cannot create X window
-			surfaceType = RenderConfig::SURFACETYPE_OFFSCREEN_NATIVE;
-		else
+//	if (surfaceType == RenderConfig::SURFACETYPE_DONT_CARE)
+//	{
+//		if (visual.getXVisual() == DE_NULL)
+//			// No visual, cannot create X window
+//			surfaceType = RenderConfig::SURFACETYPE_OFFSCREEN_NATIVE;
+//		else
 			surfaceType = RenderConfig::SURFACETYPE_WINDOW;
-	}
+//	}
 
 	switch (surfaceType)
 	{
